@@ -1,0 +1,40 @@
+{
+  "lockfile-version": 1,
+  "manifest": {
+    "schema-version": "1.10.0",
+    "install": {
+      "beeper-desktop-cli-latest": {
+        "store-path": "/nix/store/x66155wb4syc7wlp3r2n5p5kx7lnlbdc-beeper-desktop-cli-latest"
+      }
+    },
+    "hook": {},
+    "profile": {},
+    "options": {}
+  },
+  "packages": [
+    {
+      "install_id": "beeper-desktop-cli-latest",
+      "store_path": "/nix/store/x66155wb4syc7wlp3r2n5p5kx7lnlbdc-beeper-desktop-cli-latest",
+      "system": "aarch64-darwin",
+      "priority": 5
+    },
+    {
+      "install_id": "beeper-desktop-cli-latest",
+      "store_path": "/nix/store/x66155wb4syc7wlp3r2n5p5kx7lnlbdc-beeper-desktop-cli-latest",
+      "system": "aarch64-linux",
+      "priority": 5
+    },
+    {
+      "install_id": "beeper-desktop-cli-latest",
+      "store_path": "/nix/store/x66155wb4syc7wlp3r2n5p5kx7lnlbdc-beeper-desktop-cli-latest",
+      "system": "x86_64-darwin",
+      "priority": 5
+    },
+    {
+      "install_id": "beeper-desktop-cli-latest",
+      "store_path": "/nix/store/x66155wb4syc7wlp3r2n5p5kx7lnlbdc-beeper-desktop-cli-latest",
+      "system": "x86_64-linux",
+      "priority": 5
+    }
+  ]
+}
