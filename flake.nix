@@ -10,16 +10,14 @@
     utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
-      in
-      {
-        packages.default = pkgs.buildGoModule {
+        beeper-desktop-cli = pkgs.buildGoModule {
           pname = "beeper-desktop-cli";
           version = "latest";
 
           src = pkgs.fetchFromGitHub {
             owner = "beeper";
             repo = "desktop-api-cli";
-            rev = "main"; # or a specific commit/tag
+            rev = "main";
             hash = "sha256-RXBmzGaTIjDs9BSTALY9CjWVDLikyXRhMkJRAodjSeM=";
           };
 
@@ -32,9 +30,15 @@
           meta = with pkgs.lib; {
             description = "CLI for the Beeper Desktop API";
             homepage = "https://github.com/beeper/desktop-api-cli";
-            license = licenses.asl20; # Checked from go.mod and repo commonalities
+            license = licenses.asl20;
             maintainers = [ ];
           };
+        };
+      in
+      {
+        packages = {
+          inherit beeper-desktop-cli;
+          default = beeper-desktop-cli;
         };
       }
     );
