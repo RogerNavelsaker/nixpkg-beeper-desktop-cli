@@ -1,13 +1,12 @@
-# Beeper Desktop CLI (Nix/Flox)
+# Beeper Desktop CLI (Nix)
 
-This repository contains a Nix flake and a Flox environment for the [Beeper Desktop CLI](https://github.com/beeper/desktop-api-cli).
+This repository contains a Nix flake for the [Beeper Desktop CLI](https://github.com/beeper/desktop-api-cli).
 
 ## Prerequisites
 
-- [Nix](https://nixos.org/download.html) (with flakes enabled)
-- [Flox](https://flox.dev/docs/install/) (optional, for environment management)
+- [Nix](https://nixos.org/download.html) with flakes enabled
 
-## Usage with Nix
+## Usage
 
 Build the CLI:
 
@@ -20,13 +19,3 @@ Run directly:
 ```bash
 nix run .#default -- --help
 ```
-
-## Usage with Flox
-
-Activate the environment:
-
-```bash
-flox activate
-```
-
-The `beeper-desktop-cli` command will be available in your path.
