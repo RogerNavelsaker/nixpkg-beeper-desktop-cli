@@ -36,7 +36,7 @@
           };
 
           installPhase = ''
-            install -Dm755 bin/beeper $out/bin/beeper
+            install -Dm755 beeper $out/bin/beeper
           '';
 
           meta = with pkgs.lib; {
