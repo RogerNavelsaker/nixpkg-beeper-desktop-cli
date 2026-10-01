@@ -26,22 +26,18 @@
     utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
-        beeper-desktop-cli = pkgs.buildGoModule {
+        beeper-desktop-cli = pkgs.stdenvNoCC.mkDerivation {
           pname = "beeper-desktop-cli";
           version = "0.6.2";
 
-          src = pkgs.fetchFromGitHub {
-            owner = "beeper";
-            repo = "desktop-api-cli";
-            rev = "v0.6.2";
-            hash = "sha256-mk/K+6oS7fIVM7rhqcFiphRF4eivujVerAI4S1GwCuo=";
+          src = pkgs.fetchurl {
+            url = "https://github.com/beeper/cli/releases/download/v0.6.2/beeper-cli-0.6.2-linux-x64.tar.gz";
+            sha256 = "a881e1d2bc91e31218b251716644ec5f8d161d5ccb30e7eab66cf2ba6410511d";
           };
 
-          vendorHash = "sha256-8cwIuhTCyvp4JBfuCzXNEY0Qe+jm8ZQK7cP0qljm8JY=";
-
-          doCheck = false;
-
-          nativeBuildInputs = [ pkgs.go_1_25 ];
+          installPhase = ''
+            install -Dm755 bin/beeper $out/bin/beeper
+          '';
 
           meta = with pkgs.lib; {
             description = "CLI for the Beeper Desktop API";
