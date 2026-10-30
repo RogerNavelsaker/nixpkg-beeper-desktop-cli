@@ -28,13 +28,13 @@
         pkgs = import nixpkgs { inherit system; };
         beeper-desktop-cli = pkgs.buildGoModule {
           pname = "beeper-desktop-cli";
-          version = "0.6.2";
+          version = "0.6.3";
 
           src = pkgs.fetchFromGitHub {
             owner = "beeper";
             repo = "desktop-api-cli";
-            rev = "v0.6.2";
-            hash = "sha256-mk/K+6oS7fIVM7rhqcFiphRF4eivujVerAI4S1GwCuo=";
+            rev = "v0.6.3";
+            hash = "sha256-A+qrfY6cYiaqbEP11TOrdmWWqPlh0IVOs7sgKWInmQk=";
           };
 
           vendorHash = "sha256-8cwIuhTCyvp4JBfuCzXNEY0Qe+jm8ZQK7cP0qljm8JY=";
