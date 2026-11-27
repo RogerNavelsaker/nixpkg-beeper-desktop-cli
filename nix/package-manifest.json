@@ -1,0 +1,24 @@
+{
+  "source": {
+    "type": "github-release",
+    "owner": "beeper",
+    "repo": "cli",
+    "version": "0.6.4",
+    "tag": "v0.6.4",
+    "archive": "beeper-cli-0.6.4-linux-x64.tar.gz",
+    "url": "https://github.com/beeper/cli/releases/download/v0.6.4/beeper-cli-0.6.4-linux-x64.tar.gz",
+    "hash": "sha256-etZp/32P0gMujDJO3CeeyxgoL2KOEaBr6rF7enS63oo="
+  },
+  "package": {
+    "repo": "beeper-desktop-cli",
+    "version": "0.6.4"
+  },
+  "binary": {
+    "name": "beeper"
+  },
+  "meta": {
+    "description": "CLI for the Beeper Desktop API",
+    "homepage": "https://github.com/beeper/cli",
+    "licenseSpdx": "MIT"
+  }
+}

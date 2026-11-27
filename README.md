@@ -1,6 +1,6 @@
 # Beeper Desktop CLI (Nix)
 
-This repository contains a Nix flake for the [Beeper Desktop CLI](https://github.com/beeper/desktop-api-cli).
+This repository packages the upstream prebuilt linux-x64 binary of the [Beeper CLI](https://github.com/beeper/cli) (`beeper`). Supported system: `x86_64-linux`. Version syncs from `beeper/cli` GitHub releases via `.nixpkg-sync.json`.
 
 ## Prerequisites
 
